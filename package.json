@@ -1,0 +1,36 @@
+{
+  "name": "mortal-kombat",
+  "version": "1.0.0",
+  "description": "text version of famous game",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "unit": "mocha test",
+    "lint": "eslint .",
+    "test": "npm run lint && npm run unit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint ."
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rostik404/mortal-kombat.git"
+  },
+  "author": "Rostislav Shtanko <shtanko243@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rostik404/mortal-kombat/issues"
+  },
+  "homepage": "https://github.com/rostik404/mortal-kombat#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-gemini-testing": "^2.8.0",
+    "husky": "^2.3.0",
+    "sinon": "^7.3.2"
+  }
+}
