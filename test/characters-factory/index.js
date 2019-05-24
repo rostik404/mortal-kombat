@@ -7,5 +7,5 @@ const Scorpion = require('../../characters-factory/characters/scorpion');
 describe('Charaters Factory', () => {
     it('should return Scorpion', () => {
         assert.instanceOf(CharatersFactory.getCharacter(characters.SCORPION), Scorpion);
-    })
+    });
 });
