@@ -12,5 +12,8 @@ module.exports = class Subzero extends BaseCharacter {
         this._health = 370;
         this._hitCoefficient = 0.8;
         this._missCoefficient = 0.3;
+        this._vampirismCoefficient = 0.15;
+        this._criticalChance = 0.3;
+        this._criticalMultiplier = 1;
     }
 };

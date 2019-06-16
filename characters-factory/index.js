@@ -3,6 +3,7 @@
 const {characters} = require('../constants');
 const Scorpion = require('./characters/scorpion');
 const Subzero = require('./characters/subzero');
+const NoobSaibot = require('./characters/noob-saibot');
 
 module.exports = ({
     getCharacter: (character) => {
@@ -12,6 +13,10 @@ module.exports = ({
 
         if (character === characters.SCORPION) {
             return new Scorpion();
+        }
+
+        if (character === characters.NOOB_SAIBOT) {
+            return new NoobSaibot();
         }
 
         throw new Error(`Character ${character} is not supported`);

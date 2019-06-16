@@ -3,6 +3,7 @@
 module.exports = {
     characters: {
         SCORPION: 'Scorpion',
-        SUBZERO: 'Subzero'
+        SUBZERO: 'Subzero',
+        NOOB_SAIBOT: 'Noob Saibot'
     }
 };
