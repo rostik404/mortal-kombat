@@ -8,10 +8,18 @@ module.exports = class BaseCharacter {
     makeStrike() {
         console.info(`${this._name} strikes: ${_.sample(this._sounds)}`);
 
-        return this._strength * _.random(this._hitCoefficient, MAX_PROBABILITY);
+        const baseDamage = this._strength * _.random(this._hitCoefficient, MAX_PROBABILITY);
+
+        let criticalDamage = 0;
+        if (_.random(true) <= this._criticalChance) {
+            criticalDamage = baseDamage * this._criticalMultiplier;
+        }
+
+        return baseDamage + criticalDamage;
     }
 
     getStrike(damage) {
+        this._health += this._health * _.random(this._vampirismCoefficient);
         this._health -= (damage - damage * _.random(this._missCoefficient));
 
         return this._health;
